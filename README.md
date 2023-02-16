@@ -2,6 +2,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+Install node.js
+In terminal run: " npx create-next-app@latest ./ "
+In terminal run: " npm install @chakra-ui/react @emotion/react @emotion/styled axios framer-motion millify nprogress react-horizontal-scrolling-menu react-icons "
+
 First, run the development server:
 
 ```bash
