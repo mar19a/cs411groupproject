@@ -6,3 +6,10 @@ API: US Real Estate & Census data
 Database: Oracle Cloud
 Oauth: Google
 Decoupled Architecture: Next.Js, CSS, Javascript
+
+Spotify Genre Generator: Using the Spotify API we would generate playlists based on the user emotion by providing a mood tracking questionnaire
+
+API: (Spotify) Recommendation API and Playlist API
+Database: Oracle Cloud
+OAuth: Google
+Decoupled Architecture: Next.Js, CSS, Javascript
