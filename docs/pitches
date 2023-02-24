@@ -7,7 +7,8 @@ Database: Oracle Cloud
 Oauth: Google
 Decoupled Architecture: Next.Js, CSS, Javascript
 
-Spotify Genre Generator: Using the Spotify API we would generate playlists based on the user emotion by providing a mood tracking questionnaire
+Spotify Genre Generator: Using the Spotify API we would generate playlists based on the user's emotion by providing a mood tracking questionnaire. 
+The playlist takes into account the user's preffered genres and artists to generate a playlist that both fits the user's mood and matches their preferences.
 
 API: (Spotify) Recommendation API and Playlist API
 Database: Oracle Cloud
