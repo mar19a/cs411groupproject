@@ -1,5 +1,6 @@
 Real Estate web app: Using real estate listing and census data, the user will be able to select a listing and compare it to average
-listings using the census data to see whether the listing is good or not.
+listings using the census data to see whether the listing is good or not. The website will have listings that we will get from the US Real Estate API, and 
+it will tell a user facts about the listing such as if it a good buy or not depending on location
 
 API: US Real Estate & Census data
 Database: Oracle Cloud
