@@ -12,6 +12,7 @@ export default function Home() {
    <div>
       <h1>Hello World</h1>
       <Banner purpose={'For Sale'} />
+      <Banner purpose={'For Rent'} />
    </div>
   )
 }
