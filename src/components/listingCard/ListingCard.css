@@ -1,0 +1,59 @@
+.listingCard {
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    box-shadow: 5px 5px 18px #d3d3d3;
+  }
+  
+  .listingCard:hover {
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    box-shadow: 5px 5px 18px #949494;
+  }
+  
+  .listingText {
+    padding: 1rem;
+  }
+  
+  .listingCard img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .popupContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px;
+  }
+  
+  .popupContainer img {
+    width: 500px;
+  }
+  
+  .popupRight {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 5px;
+  }
+  
+  .popupRight p {
+    margin: 8px;
+  }
+  
+  .popupRight h2 {
+    margin: 10px;
+  }
+  
+  @media only screen and (max-width: 760px) {
+    .popupContainer {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .popupContainer img {
+      width: 100%;
+    }
+  }
+  

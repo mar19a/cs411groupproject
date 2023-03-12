@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+/* Brand Color: #1277e1 */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+p {
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.containter {
+  width: 100%;
+  margin: auto;
+}
+
+.btn {
+  padding: 12px 24px;
+  background-color: transparent;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  transition: 0.4s;
+  cursor: pointer;
+  height: 45px;
+  width: 100px;
+  margin: 1rem;
+}
+
+.btn:active {
+  transform: translate(4px);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0, 0.2);
+  border-bottom: none;
+}
+
+
+
+.searchBar {
+  width: 35%;
+  margin: auto;
+}
+
+.searchBar input {
+  border: 1px solid #333;
+}
+
+.listingsPage {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
