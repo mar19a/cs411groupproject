@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import BluefinLogo from "../../../src/pictures/bluefin-logo.png";
+
 
 import "./Modal.css";
 
@@ -15,7 +15,7 @@ const Modal = ({ open, children, onClose }) => {
               <button onClick={onClose} className="btn">
                 Close
               </button>
-              <img src={BluefinLogo} alt="/" width="75px" height="auto" />
+
             </div>
             <div>{children}</div>
           </div>
