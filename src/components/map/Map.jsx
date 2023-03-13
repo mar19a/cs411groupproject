@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import GoogleMapReact from "google-map-react";
 import { RiMapPin2Fill } from "react-icons/ri";
-import InfoMarker from "../infoMarker/InfoMarker";
+import InfoMarker from "../infoMarker/infoMarker";
 
 import "./Map.css";
 
