@@ -1,7 +1,7 @@
 import React from "react";
 import { FaTimes } from "react-icons/fa";
 
-import "./InfoMarker.css";
+import "./infoMarker.css";
 
 const InfoMarker = ({ info, handleClick }) => {
   return (
