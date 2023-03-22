@@ -74,11 +74,9 @@ function App() {
     {
       path: "/Contact",
       element: (
-        <>
-          <Navbar />
-          <ContactPage />
-          <Footer />
-        </>
+        <ContactPage
+          
+        />
       ),
     },
     
