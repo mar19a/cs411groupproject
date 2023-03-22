@@ -50,7 +50,7 @@ const NavBar = () => {
         <div className={click ? "menu-container active" : "menu-container"}>
           <ul className="nav-menu">
           <a className="aLinks" href="/" style={{ color: `${alink}` }}>
-            Buy 
+            Home 
           </a>
             <a className="aLinks" href="/Awards" style={{ color: `${alink}` }}>
               Awards

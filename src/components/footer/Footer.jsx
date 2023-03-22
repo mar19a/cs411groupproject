@@ -5,7 +5,7 @@ import {
   FaTwitter,
   FaPinterest,
 } from "react-icons/fa";
-
+import Logo from "../..//pictures/Seekers-Logo.png";
 
 import "./Footer.css";
 
@@ -25,10 +25,11 @@ const Footer = () => {
         </div>
       </div>
       <img
-     
+        alt="logo"
+        src={Logo}
         height="100px"
         onClick={returnHome}
-       
+        className="Seekers-Logo"
       />
       <div className="social">
         <FaFacebookSquare />
