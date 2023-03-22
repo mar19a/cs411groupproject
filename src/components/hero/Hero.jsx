@@ -15,7 +15,7 @@ const Hero = ({ fetchListings, listings }) => {
       alert("Please enter a city, address, or ZIP");
     } else {
       fetchListings(query);
-      navigate("/listings");
+      navigate("/listing");
       setQuery("");
     }
   };

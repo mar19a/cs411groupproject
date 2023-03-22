@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import axios from "axios";
 import Home from "./routes/Home";
 import Navbar from "./components/navbar/NavBar";
 import Listings from "./routes/Listings";
 import Footer from "./components/footer/Footer";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Switch } from 'react-router';
+import ContactPage from "./components/ContactPage";
 
 function App() {
   const [listings, setListings] = useState([]);
@@ -60,7 +62,7 @@ function App() {
       ),
     },
     {
-      path: "/listings",
+      path: "/listing",
       element: (
         <Listings
           fetchListings={fetchListings}
@@ -69,6 +71,17 @@ function App() {
         />
       ),
     },
+    {
+      path: "/Contact",
+      element: (
+        <>
+          <Navbar />
+          <ContactPage />
+          <Footer />
+        </>
+      ),
+    },
+    
   ]);
 
   return (
@@ -81,3 +94,4 @@ function App() {
 }
 
 export default App;
+  

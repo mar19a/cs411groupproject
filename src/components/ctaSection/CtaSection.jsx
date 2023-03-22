@@ -12,14 +12,14 @@ const CtaSection = () => {
       <div className="Section">
         <img alt="for sale house" src={ForSale} />
         <div className="verbiage">
-          <h2> Sell for more than the house next door </h2>
+          <h2> Search for restaurants, hotels, schools, and more close to your dream house </h2>
           <p>
-            Local Seekers Agents price your home right and make it shine online.
-            Get started with a free consultation.
+            Know what places are around after you make your dream purchase!
           </p>
           <form className="search">
-            <input type="text" placeholder=" Enter your street address" />
-            <button disabled>Next</button>
+            <input type="text" placeholder="City, Address, School, Agent, ZIP" />
+            <button className="searchBtn" disabled>
+              <AiOutlineSearch className="icon" /></button>
           </form>
         </div>
       </div>

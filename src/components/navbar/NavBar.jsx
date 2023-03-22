@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { FaRegTimesCircle } from "react-icons/fa";
-
+import { Link } from "react-router-dom"; // step 1
 
 import "./Navbar.css";
 
@@ -48,11 +48,11 @@ const NavBar = () => {
         </div>
         <div className={click ? "menu-container active" : "menu-container"}>
           <ul className="nav-menu">
-            <a className="aLinks" href="/" style={{ color: `${alink}` }}>
-              Buy
-            </a>
-            <a className="aLinks" href="/" style={{ color: `${alink}` }}>
-              Rent
+          <a className="aLinks" href="/" style={{ color: `${alink}` }}>
+            Buy 
+          </a>
+            <a className="aLinks" href="/Awards" style={{ color: `${alink}` }}>
+              Awards
             </a>
             <a className="aLinks" href="/" style={{ color: `${alink}` }}>
               Sell
@@ -63,8 +63,8 @@ const NavBar = () => {
             <a className="aLinks" href="/" style={{ color: `${alink}` }}>
               Real Estate Agents
             </a>
-            <a className="aLinks" href="/" style={{ color: `${alink}` }}>
-              Feed
+            <a className="aLinks" href="/Contact" style={{ color: `${alink}` }}>
+              Contact Us
             </a>
           </ul>
           <button
