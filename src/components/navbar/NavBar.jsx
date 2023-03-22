@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { FaRegTimesCircle } from "react-icons/fa";
 import { Link } from "react-router-dom"; // step 1
-
+import SeekersLogo from "../../pictures/Seekers-Logo.png";
 import "./Navbar.css";
 
 const NavBar = () => {
@@ -39,9 +39,10 @@ const NavBar = () => {
     <div className="navbar">
       <div className="container">
         <img
-         
+         alt="Seekers-logo"
           onClick={returnHome}
-         
+         src= {SeekersLogo}
+         className="Seekers-logo"
         ></img>
         <div className="icon" onClick={handleClick}>
           {click ? <FaRegTimesCircle /> : <HiOutlineMenuAlt4 />}
