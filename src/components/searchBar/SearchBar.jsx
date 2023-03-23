@@ -25,7 +25,7 @@ const SearchBar = ({ fetchListings }) => {
           value={query}
           onChange={onChange}
           type="text"
-          placeholder=" City, Address, School, Agent, ZIP"
+          placeholder=" City, Address, School, ZIP"
         />
         <button type="submit">
           <AiOutlineSearch className="icon" />

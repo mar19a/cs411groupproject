@@ -17,11 +17,7 @@ const Footer = () => {
     <div className="footer">
       <div className="container">
         <div className="col">
-          <a href="/">About</a>
-          <a href="/">Bestimates</a>
-          <a href="/">Mortgage</a>
-          <a href="/">Planning</a>
-          <a href="/">Advertise</a>
+          
         </div>
       </div>
       <img
