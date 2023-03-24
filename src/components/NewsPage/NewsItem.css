@@ -1,15 +1,29 @@
 .news-app {
-    display: flex;
-    justify-content: center;
-}
-
-.news-item {
-    width: 500px;
-    padding: 20px;
-   
     margin-bottom: 20px;
-}
-
-.news-img {
-    width: 400px;
-}
+  }
+  
+  .news-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .news-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
