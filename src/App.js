@@ -7,7 +7,7 @@ import Footer from "./components/footer/Footer";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Switch } from 'react-router';
 import ContactPage from "./components/ContactPage";
-
+import NewsPage from "./components/NewsPage/NewsPage";
 function App() {
   const [listings, setListings] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -79,6 +79,15 @@ function App() {
         />
       ),
     },
+
+    {
+      path: "/News",
+      element: (
+        <>
+        <NewsPage />
+      </>
+      ),
+    },
     
   ]);
 
@@ -92,4 +101,3 @@ function App() {
 }
 
 export default App;
-  

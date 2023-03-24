@@ -3,7 +3,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import ForSale from "../../pictures/forSale.jpg";
 import MarketUpdate from "../../pictures/marketUpdate.jpg";
 import Rental from "../../pictures/rental.jpg";
-
+import { Link } from 'react-router-dom';
 import "./CtaSection.css";
 
 const CtaSection = () => {
@@ -30,15 +30,19 @@ const CtaSection = () => {
             Finding the apartment, condo, or house you’ll love to rent just got
             easier.
           </p>
+
           <form className="search">
-            <input
-              type="text"
-              placeholder="City, Address, School, Agent, ZIP"
-            />
-            <button className="searchBtn" disabled>
-              <AiOutlineSearch className="icon" />
-            </button>
+            <input type="text" placeholder="City, Address, School, Agent, ZIP" />
+            <Link to="/News">
+              <button className="searchBtn">
+                <AiOutlineSearch className="icon" />
+              </button>
+            </Link>
           </form>
+
+
+
+
         </div>
         <img alt="for sale house" src={Rental} />
       </div>
