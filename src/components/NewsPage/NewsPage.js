@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import NewsItem from './NewsItem'
+import './NewsPage.css'
+
 const NewsPage = () => {
 
   const [articles, setArticles] = useState([])
@@ -12,19 +14,21 @@ const NewsPage = () => {
     }
     getArticles()
   }, [])
+
   return (
-    <div>
-            {articles.map(article => {
-                return(
-                    <NewsItem 
-                        title={article.title}
-                        description={article.description}
-                        url={article.url}
-                        urlToImage={article.urlToImage} 
-                    />
-                )
-            })}
-        </div>
+    <div className="news-grid">
+      {articles.map((article, index) => {
+        return (
+          <NewsItem
+            key={index}
+            title={article.title}
+            description={article.description}
+            url={article.url}
+            urlToImage={article.urlToImage}
+          />
+        )
+      })}
+    </div>
   );
 }
 
