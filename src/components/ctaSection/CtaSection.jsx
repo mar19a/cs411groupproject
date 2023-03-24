@@ -23,40 +23,6 @@ const CtaSection = () => {
           </form>
         </div>
       </div>
-      <div className="Section">
-        <div className="verbiage">
-          <h2> Your perfect rental is now on Seekers </h2>
-          <p>
-            Finding the apartment, condo, or house you’ll love to rent just got
-            easier.
-          </p>
-
-          <form className="search">
-            <input type="text" placeholder="City, Address, School, Agent, ZIP" />
-            <Link to="/News">
-              <button className="searchBtn">
-                <AiOutlineSearch className="icon" />
-              </button>
-            </Link>
-          </form>
-
-
-
-
-        </div>
-        <img alt="for sale house" src={Rental} />
-      </div>
-      <div className="Section">
-        <img alt="for sale house" src={MarketUpdate} />
-        <div className="verbiage">
-          <h2> Get real-time market updates </h2>
-          <p>
-            We’re bringing you the latest on how COVID-19 is impacting the real
-            estate market.
-          </p>
-          <button disabled>Housing News</button>
-        </div>
-      </div>
     </div>
   );
 };

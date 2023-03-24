@@ -52,8 +52,8 @@ const NavBar = () => {
           <a className="aLinks" href="/" style={{ color: `${alink}` }}>
             Home 
           </a>
-            <a className="aLinks" href="/Awards" style={{ color: `${alink}` }}>
-              Awards
+            <a className="aLinks" href="/News" style={{ color: `${alink}` }}>
+              News
             </a>
             <a className="aLinks" href="/" style={{ color: `${alink}` }}>
               Sell
