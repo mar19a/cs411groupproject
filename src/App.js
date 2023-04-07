@@ -5,11 +5,13 @@ import Home from "./routes/Home";
 import Navbar from "./components/navbar/NavBar";
 import Listings from "./routes/Listings";
 import Footer from "./components/footer/Footer";
+import Businesses from "./routes/Businesses.jsx"
 
 function App() {
   const [listings, setListings] = useState([]);
   const [loading, setLoading] = useState(false);
   const [sortOrder, setSortOrder] = useState(2);
+  const [businesses, setBusinesses] = useState([])
 
   const length = listings.length;
   console.log(length + " this is the length");
@@ -31,6 +33,7 @@ function App() {
     axios
       .request(options)
       .then((response) => {
+        console.log(response.data)
         let props = response.data.props;
 
         props = props.sort((a, b) => {
@@ -48,6 +51,31 @@ function App() {
       });
   };
 
+  const fetchBusinesses = (query) => {
+    var options = {
+      method: 'GET',
+      url: 'https://local-business-data.p.rapidapi.com/search',
+      params: {
+        query: query,
+        limit: '3',
+        language: 'en',
+        region: 'us'
+      },
+     headers: {
+      'X-RapidAPI-Key': 'c4f3e07beemshb1acc916f9b9c8bp18ed02jsnbc8e23bf33b8',
+      'X-RapidAPI-Host': 'local-business-data.p.rapidapi.com'
+      }
+    };
+
+  axios.request(options).then(function (response) {
+    let data = response.data.data;
+    setBusinesses(data)
+  }).catch(function (error) {
+    console.error(error);
+  });
+};
+
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -56,6 +84,7 @@ function App() {
           fetchListings={fetchListings}
           listings={listings}
           loading={loading}
+          fetchBusinesses={fetchBusinesses}
         />
       ),
     },
@@ -69,8 +98,17 @@ function App() {
         />
       ),
     },
-  ]);
+    {
+      path: "/businesses",
+      element: (
+        <Businesses
+        fetchBusinesses={fetchBusinesses}
+        businesses={businesses}
+        />
+      )
+    }
 
+  ]);
   return (
     <>
       <Navbar />
@@ -78,6 +116,8 @@ function App() {
       <Footer />
     </>
   );
+
+  
 }
 
 export default App;

@@ -1,56 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import ForSale from "../../pictures/forSale.jpg";
-import MarketUpdate from "../../pictures/marketUpdate.jpg";
-import Rental from "../../pictures/rental.jpg";
+import { useNavigate } from "react-router-dom";
+
+
+
 
 import "./CtaSection.css";
 
-const CtaSection = () => {
+const CtaSection = ({ fetchBusinesses }) => {
+  const [query, setQuery] = useState("");
+  
+  const navigate = useNavigate()
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (query === "") {
+      alert("Please enter a city");
+    } else {
+      fetchBusinesses(query);
+      navigate("/businesses")
+      setQuery("");
+    }
+  };
+
+  const onChange = (e) => {
+    setQuery(e.target.value);
+  };
+
+
   return (
     <div className="ctaSection">
       <div className="Section">
         <img alt="for sale house" src={ForSale} />
         <div className="verbiage">
-          <h2> Sell for more than the house next door </h2>
+          <h2> Search Local Businesses Nearby! </h2>
           <p>
-            Local Seekers Agents price your home right and make it shine online.
-            Get started with a free consultation.
+          Let us help you find not just the perfect home, but also the perfect location.
+          We'll make it easy by providing you with a list of local businesses you're sure to love.
           </p>
-          <form className="search">
-            <input type="text" placeholder=" Enter your street address" />
-            <button disabled>Next</button>
-          </form>
-        </div>
-      </div>
-      <div className="Section">
-        <div className="verbiage">
-          <h2> Your perfect rental is now on Seekers </h2>
-          <p>
-            Finding the apartment, condo, or house you’ll love to rent just got
-            easier.
-          </p>
-          <form className="search">
-            <input
-              type="text"
-              placeholder="City, Address, School, Agent, ZIP"
+          <form className="search" onSubmit={onSubmit}>
+            <input 
+            value={query}
+            onChange={onChange}
+            type="text"
+            placeholder="For example: Restaurants in San Diego..."
             />
-            <button className="searchBtn" disabled>
-              <AiOutlineSearch className="icon" />
+            <button 
+            type="submit">
+            <AiOutlineSearch className="icon" />
             </button>
           </form>
-        </div>
-        <img alt="for sale house" src={Rental} />
-      </div>
-      <div className="Section">
-        <img alt="for sale house" src={MarketUpdate} />
-        <div className="verbiage">
-          <h2> Get real-time market updates </h2>
-          <p>
-            We’re bringing you the latest on how COVID-19 is impacting the real
-            estate market.
-          </p>
-          <button disabled>Housing News</button>
         </div>
       </div>
     </div>
