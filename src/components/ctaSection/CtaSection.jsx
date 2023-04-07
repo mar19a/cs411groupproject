@@ -1,25 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import ForSale from "../../pictures/forSale.jpg";
-import MarketUpdate from "../../pictures/marketUpdate.jpg";
-import Rental from "../../pictures/rental.jpg";
-import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import "./CtaSection.css";
 
-const CtaSection = () => {
+const CtaSection = ({ fetchBusinesses }) => {
+  const [query, setQuery] = useState("");
+  
+  const navigate = useNavigate()
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (query === "") {
+      alert("Please enter a city");
+    } else {
+      fetchBusinesses(query);
+      navigate("/businesses")
+      setQuery("");
+    }
+  };
+
+  const onChange = (e) => {
+    setQuery(e.target.value);
+  };
+
+
   return (
     <div className="ctaSection">
       <div className="Section">
         <img alt="for sale house" src={ForSale} />
         <div className="verbiage">
-          <h2> Search for restaurants, hotels, schools, and more close to your dream house </h2>
+          <h2> Search Local Businesses Nearby! </h2>
           <p>
-            Know what places are around after you make your dream purchase!
+          Let us help you find not just the perfect home, but also the perfect location.
+          We'll make it easy by providing you with a list of local businesses you're sure to love.
           </p>
-          <form className="search">
-            <input type="text" placeholder="City, Address, School, Agent, ZIP" />
-            <button className="searchBtn" disabled>
-              <AiOutlineSearch className="icon" /></button>
+          <form className="search" onSubmit={onSubmit}>
+            <input 
+            value={query}
+            onChange={onChange}
+            type="text"
+            placeholder="For example: Restaurants in San Diego..."
+            />
+            <button 
+            type="submit">
+            <AiOutlineSearch className="icon" />
+            </button>
           </form>
         </div>
       </div>
