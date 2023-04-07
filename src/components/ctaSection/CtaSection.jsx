@@ -2,10 +2,6 @@ import React, { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import ForSale from "../../pictures/forSale.jpg";
 import { useNavigate } from "react-router-dom";
-
-
-
-
 import "./CtaSection.css";
 
 const CtaSection = ({ fetchBusinesses }) => {

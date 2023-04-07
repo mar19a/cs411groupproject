@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import axios from "axios";
 import Home from "./routes/Home";
 import Navbar from "./components/navbar/NavBar";
 import Listings from "./routes/Listings";
 import Footer from "./components/footer/Footer";
 import Businesses from "./routes/Businesses.jsx"
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Switch } from 'react-router';
+import ContactPage from "./components/ContactPage";
+import NewsPage from "./components/NewsPage/NewsPage";
 function App() {
   const [listings, setListings] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -89,7 +91,7 @@ function App() {
       ),
     },
     {
-      path: "/listings",
+      path: "/listing",
       element: (
         <Listings
           fetchListings={fetchListings}
@@ -106,9 +108,27 @@ function App() {
         businesses={businesses}
         />
       )
-    }
+    },
+    {
+      path: "/Contact",
+      element: (
+        <ContactPage
+          
+        />
+      ),
+    },
 
+    {
+      path: "/News",
+      element: (
+        <>
+        <NewsPage />
+      </>
+      ),
+    },
+    
   ]);
+
   return (
     <>
       <Navbar />

@@ -1,0 +1,50 @@
+.contact form div {
+    display: flex;
+  }
+  .contact textarea {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  .contact input {
+    margin-bottom: 20px;
+    margin-right: 10px;
+  }
+  .contact form {
+    padding: 30px;
+  }
+  .contact .back img {
+    max-width: 100%;
+    margin: 0 auto;
+    float: left;
+    margin-top: -200px;
+  }
+  .contact .back h1 {
+    color: white;
+  }
+  .contact h1,
+.contact h2 {
+  color: white;
+}
+
+
+
+.contact section.contact.mb .back img {
+  filter: hue-rotate(90deg);
+}
+  @media screen and (max-width: 768px) {
+    .contact h4 {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .contact form div {
+      flex-direction: column;
+    }
+    .contact input {
+      width: 100%;
+    }
+   
+  }
+
+  

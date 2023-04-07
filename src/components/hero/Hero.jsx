@@ -15,7 +15,7 @@ const Hero = ({ fetchListings, listings }) => {
       alert("Please enter a city, address, or ZIP");
     } else {
       fetchListings(query);
-      navigate("/listings");
+      navigate("/listing");
       setQuery("");
     }
   };
@@ -34,7 +34,7 @@ const Hero = ({ fetchListings, listings }) => {
             value={query}
             onChange={onChange}
             type="text"
-            placeholder=" City, Address, School, Agent, ZIP"
+            placeholder=" City, Address, School, ZIP"
           />
           <button type="submit">
             <AiOutlineSearch className="icon" />
