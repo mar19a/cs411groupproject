@@ -34,7 +34,7 @@ const Footer = () => {
         <FaPinterest />
       </div>
       <img
-  
+        src="https://s.zillowstatic.com/pfs/static/footer-art.svg"
         type="image/svg+xml"
         alt="Footer art"
         focusable="false"
