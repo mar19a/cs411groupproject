@@ -1,22 +1,10 @@
 import React from 'react';
 import './LoginForm.css';
-import { FaRegTimesCircle } from 'react-icons/fa';
-const LoginForm = ({ onClose }) => {
+
+const LoginForm = () => {
   return (
-    <div className="login-form-wrapper">
-      <div className="login-form">
-      <button className="close-button" onClick={onClose}>
-          <FaRegTimesCircle />
-        </button>
-        <h2>Login</h2>
-        <form>
-          <input type="email" placeholder="Email" required />
-          <input type="password" placeholder="Password" required />
-          <button type="submit">Log In</button>
-        </form>
-        <div className="close-button-wrapper">
-        </div>
-      </div>
+    <div className="login-page">
+      <h1>Hello World</h1>
     </div>
   );
 };

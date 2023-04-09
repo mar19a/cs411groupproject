@@ -1,72 +1,10 @@
-.login-form-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
-  }
-  
-  .login-form {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 400px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-    position: relative;
-  }
-  
-  .login-form h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .login-form input {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  .login-form button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin: 20px 0;
-    background-color: #1d6ec8;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .login-form button:hover {
-    background-color: #145aad;
-  }
-  
-  .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #888;
-    cursor: pointer;
-  }
-  
-  .close-button:hover {
-    color: #666;
-  }
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px); /* Assuming your navbar height is 60px */
+}
+
+.login-page h1 {
+  margin: 0;
+}

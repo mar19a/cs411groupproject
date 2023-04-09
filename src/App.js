@@ -9,6 +9,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Switch } from 'react-router';
 import ContactPage from "./components/ContactPage";
 import NewsPage from "./components/NewsPage/NewsPage";
+import SignUpForm from "./components/SignUpForm/SignUpForm";
+import LoginForm from "./components/LoginForm/LoginForm";
 function App() {
   const [listings, setListings] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -124,6 +126,18 @@ function App() {
         <>
         <NewsPage />
       </>
+      ),
+    },
+    {
+      path: "/signup",
+      element: (
+        <SignUpForm />
+      ),
+    },
+    {
+      path: "/login",
+      element: (
+        <LoginForm />
       ),
     },
     

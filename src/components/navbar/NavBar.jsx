@@ -43,9 +43,7 @@ const NavBar = () => {
     setShowLoginForm(!showLoginForm);
   };
 
-  const toggleSignUpForm = () => {
-    setShowSignUpForm(!showSignUpForm);
-  };
+ 
 
   return (
     <div className="navbar">
@@ -79,25 +77,17 @@ const NavBar = () => {
             <a className="aLinks" href="/Contact" style={{ color: `${alink}` }}>
               Contact Us
             </a>
+            <a className="aLinks" href="/signup" style={{ color: `${alink}` }}>
+              Sign Up
+            </a>
+            <a className="aLinks" href="/login" style={{ color: `${alink}` }}>
+              Login
+            </a>
           </ul>
-          <button
-            className="btn"
-            style={{ color: `${btnColor}`, border: `${btnBorderColor}` }}
-            onClick={toggleLoginForm}
-          >
-            Log In
-          </button>
-          <button
-            className="btn"
-            style={{ color: `${btnColor}`, border: `${btnBorderColor}` }}
-            onClick={toggleSignUpForm}
-          >
-            Sign Up
-          </button>
+          
         </div>
       </div>
-      {showLoginForm && <LoginForm onClose={toggleLoginForm} />}
-      {showSignUpForm && <SignUpForm onClose={toggleSignUpForm} />}
+      
     </div>
   );
 };
