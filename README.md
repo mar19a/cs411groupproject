@@ -10,6 +10,6 @@ How to run the Backend server
 
 Change Directory to Backend 
 
-Do " node server.js ". If successful, "Running backend server will appear"
+Do " node server.js ". If successful, "Running backend server" will appear.
 
 Have XAMPP installed
