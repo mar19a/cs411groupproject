@@ -73,42 +73,22 @@ const NavBar = () => {
             <a className="aLinks" href="/Contact">
               Contact Us
             </a>
-<<<<<<< HEAD
-            {!currentUser && (
-              <>
-                <a
-                  className="aLinks"
-                  href="/signup"
-                  style={{ color: `${alink}` }}
-                >
-                  Sign Up
-                </a>
-                <a
-                  className="aLinks"
-                  href="/login"
-                  style={{ color: `${alink}` }}
-                >
-                  Login
-                </a>
-              </>
-            )}
-            {currentUser && <li className="aLinks">{currentUser}</li>}
-=======
->>>>>>> 0b50184d5df87d293d697ff5067a1ac8ceade8d0
           </ul>
         </div>
-        <button
+        <a
             className="btn"
-            style={{ color: `${btnColor}`, border: `${btnBorderColor}` }}
+            href="/login"
+            style={{ color: `${btnColor}`, border: `${btnBorderColor}`, textAlign: "center", justifyContent: "center", alignItems: "center" }}
           >
             Log In
-          </button>
-          <button
+          </a>
+          <a
             className="btn"
-            style={{ color: `${btnColor}`, border: `${btnBorderColor}`, whiteSpace:"nowrap" }}
+            href="/signup"
+            style={{ color: `${btnColor}`, border: `${btnBorderColor}`, whiteSpace:"nowrap", textAlign: "center", justifyContent: "center", alignItems: "center" }}
           >
             Sign Up
-          </button>
+          </a>
       </div>
     </div>
   );
