@@ -34,11 +34,9 @@ const Hero = ({ fetchListings, listings }) => {
             value={query}
             onChange={onChange}
             type="text"
-            placeholder=" City, Address, School, ZIP"
+            placeholder="Enter a city, address..."
+            style={{ color: "white", fontWeight: "100" }}
           />
-          <button type="submit">
-            <AiOutlineSearch className="icon" />
-          </button>
         </form>
       </div>
     </div>
