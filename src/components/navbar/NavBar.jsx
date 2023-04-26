@@ -77,18 +77,20 @@ const NavBar = () => {
             </a>
           </ul>
         </div>
-        <button
+        <a
             className="btn"
-            style={{ color: `${btnColor}`, border: `${btnBorderColor}` }}
+            href="/login"
+            style={{ color: `${btnColor}`, border: `${btnBorderColor}`, textAlign: "center", justifyContent: "center", alignItems: "center" }}
           >
             Log In
-          </button>
-          <button
+          </a>
+          <a
             className="btn"
-            style={{ color: `${btnColor}`, border: `${btnBorderColor}`, whiteSpace:"nowrap" }}
+            href="/signup"
+            style={{ color: `${btnColor}`, border: `${btnBorderColor}`, whiteSpace:"nowrap", textAlign: "center", justifyContent: "center", alignItems: "center" }}
           >
             Sign Up
-          </button>
+          </a>
       </div>
     </div>
   );
