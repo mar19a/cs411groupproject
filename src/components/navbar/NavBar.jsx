@@ -11,9 +11,13 @@ import { useAuth } from "../LoginForm/AuthContext";
 const NavBar = () => {
   const [click, setClick] = useState(false);
   const [alink, setALink] = useState("#fff");
-  const [btnColor, setbtnColor] = useState("#fff");
-  const [btnBorderColor, setBtnBorderColor] = useState("2px solid #fff");
-  const { currentUser } = useAuth(); // <- Get the currentUser from the context
+
+
+  const [btnColor, setbtnColor] = useState("#333");
+  const [btnBorderColor, setBtnBorderColor] = useState("2px solid #333");
+  const [showLoginForm, setShowLoginForm] = useState(false);
+  const [showSignUpForm, setShowSignUpForm] = useState(false);
+
 
   useEffect(() => {
     if (window.location.pathname === "/listings") {
@@ -42,35 +46,34 @@ const NavBar = () => {
   return (
     <div className="navbar">
       <div className="container">
+
         <img
-          alt="Seekers-logo"
+         alt="Seekers-logo"
           onClick={returnHome}
-          src={SeekersLogo}
-          className="Seekers-logo"
+         src= {SeekersLogo}
+         className="Seekers-logo"
         ></img>
-        <div className="icon" onClick={handleClick}>
-          {click ? <FaRegTimesCircle /> : <HiOutlineMenuAlt4 />}
-        </div>
         <div className={click ? "menu-container active" : "menu-container"}>
           <ul className="nav-menu">
-            <a className="aLinks" href="/" style={{ color: `${alink}` }}>
-              Home
-            </a>
-            <a className="aLinks" href="/News" style={{ color: `${alink}` }}>
+          <a className="aLinks" href="/">
+            Home 
+          </a>
+            <a className="aLinks" href="/News">
               News
             </a>
-            <a className="aLinks" href="/" style={{ color: `${alink}` }}>
+            <a className="aLinks" href="/" >
               Sell
             </a>
-            <a className="aLinks" href="/" style={{ color: `${alink}` }}>
+            <a className="aLinks" href="/" >
               Mortgage
             </a>
-            <a className="aLinks" href="/" style={{ color: `${alink}` }}>
-              Real Estate Agents
+            <a className="aLinks" href="/" >
+            Agents
             </a>
-            <a className="aLinks" href="/Contact" style={{ color: `${alink}` }}>
+            <a className="aLinks" href="/Contact">
               Contact Us
             </a>
+<<<<<<< HEAD
             {!currentUser && (
               <>
                 <a
@@ -90,8 +93,22 @@ const NavBar = () => {
               </>
             )}
             {currentUser && <li className="aLinks">{currentUser}</li>}
+=======
+>>>>>>> 0b50184d5df87d293d697ff5067a1ac8ceade8d0
           </ul>
         </div>
+        <button
+            className="btn"
+            style={{ color: `${btnColor}`, border: `${btnBorderColor}` }}
+          >
+            Log In
+          </button>
+          <button
+            className="btn"
+            style={{ color: `${btnColor}`, border: `${btnBorderColor}`, whiteSpace:"nowrap" }}
+          >
+            Sign Up
+          </button>
       </div>
     </div>
   );
