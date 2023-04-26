@@ -11,6 +11,7 @@ import ContactPage from "./components/ContactPage";
 import NewsPage from "./components/NewsPage/NewsPage";
 import SignUpForm from "./components/SignUpForm/SignUpForm";
 import LoginForm from "./components/LoginForm/LoginForm";
+import { AuthProvider } from "./components/LoginForm/AuthContext"; 
 function App() {
   const [listings, setListings] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -144,14 +145,12 @@ function App() {
   ]);
 
   return (
-    <>
+    <AuthProvider>
       <Navbar />
       <RouterProvider router={router} />
       <Footer />
-    </>
+    </AuthProvider>
   );
-
-  
 }
 
 export default App;

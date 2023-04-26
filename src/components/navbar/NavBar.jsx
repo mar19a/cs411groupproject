@@ -6,14 +6,14 @@ import SeekersLogo from "../../pictures/Seekers-Logo.png";
 import "./Navbar.css";
 import LoginForm from "../LoginForm/LoginForm";
 import SignUpForm from "../SignUpForm/SignUpForm";
+import { useAuth } from "../LoginForm/AuthContext";
 
 const NavBar = () => {
   const [click, setClick] = useState(false);
   const [alink, setALink] = useState("#fff");
   const [btnColor, setbtnColor] = useState("#fff");
   const [btnBorderColor, setBtnBorderColor] = useState("2px solid #fff");
-  const [showLoginForm, setShowLoginForm] = useState(false);
-  const [showSignUpForm, setShowSignUpForm] = useState(false);
+  const { currentUser } = useAuth(); // <- Get the currentUser from the context
 
   useEffect(() => {
     if (window.location.pathname === "/listings") {
@@ -38,12 +38,6 @@ const NavBar = () => {
   const returnHome = () => {
     window.location = "/";
   };
-
-  const toggleLoginForm = () => {
-    setShowLoginForm(!showLoginForm);
-  };
-
- 
 
   return (
     <div className="navbar">
@@ -77,17 +71,28 @@ const NavBar = () => {
             <a className="aLinks" href="/Contact" style={{ color: `${alink}` }}>
               Contact Us
             </a>
-            <a className="aLinks" href="/signup" style={{ color: `${alink}` }}>
-              Sign Up
-            </a>
-            <a className="aLinks" href="/login" style={{ color: `${alink}` }}>
-              Login
-            </a>
+            {!currentUser && (
+              <>
+                <a
+                  className="aLinks"
+                  href="/signup"
+                  style={{ color: `${alink}` }}
+                >
+                  Sign Up
+                </a>
+                <a
+                  className="aLinks"
+                  href="/login"
+                  style={{ color: `${alink}` }}
+                >
+                  Login
+                </a>
+              </>
+            )}
+            {currentUser && <li className="aLinks">{currentUser}</li>}
           </ul>
-          
         </div>
       </div>
-      
     </div>
   );
 };
