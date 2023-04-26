@@ -1,0 +1,6 @@
+1. Each team picks one of their user stories to estimate (each member of the team will do their own individual estimation on the same story).
+2. Create a work breakdown of the story, basically a detailed list of all of the things that have to be done to complete the story. 
+For example, if the story is about user preferences, you’d have to build the user tables, write queries to manage profiles, create a page to display / edit prefs, set up some kind of auth, and so on. 
+You should end up with a relatively long list...I’d expect to see at least ten things to do...at a highly granular level.
+3. For each task in the list, estimate how many hours it will take to accomplish the task. Add up the hours for all of the tasks to get a total estimate for the story.
+4. Once everyone on your team is done with estimates (20 minutes or so), compare estimates. Talk about your numbers, how they compare, and perhaps adjust your estimates if they seem widly off. The goal is to create a ‘master’ list that the team agrees on with what they think is a solid estimate.
