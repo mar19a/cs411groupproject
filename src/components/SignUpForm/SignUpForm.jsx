@@ -1,73 +1,48 @@
 import React, { useState } from "react";
 import "./SignUpForm.css";
-
+import Axios from "axios";
 const SignUpForm = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-  });
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [loginStatus, setLoginStatus] = useState("");
+  const [registerStatus, setRegisterStatus] = useState("");
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
-  };
+  const register = (e) => {
+    e.preventDefault();
+    Axios.post("http://localhost:3053/signup", {
+      email: email,
+      username: username,
+      password: password,
+    }).then((response) => {
+      // setRegisterStatus(response);
+      // console.log(response);
+      if(response.data.message){
+        setRegisterStatus(response.data.message);
+      }else{
+        setRegisterStatus("ACCOUNT CREATED SUCCESSFULLY");
+      }
+    })
+  }
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    try {
-      const response = await fetch("http://localhost:3001/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      const result = await response.json();
-      console.log(result);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+ 
 
-  return (
-    <form className="sign-up-form" onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="firstName"
-        placeholder="First Name"
-        value={formData.firstName}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="text"
-        name="lastName"
-        placeholder="Last Name"
-        value={formData.lastName}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="password"
-        name="password"
-        placeholder="Password"
-        value={formData.password}
-        onChange={handleChange}
-        required
-      />
-      <button type="submit">Sign Up</button>
-    </form>
+  return(
+    <div className="container">
+      <div className="loginForm">
+        <form>
+          <h4>Register Here</h4>
+          <label htmlFor="email">Email Address*</label>
+          <input className="textInput" type="text" name="email" onChange={(e) => {setEmail(e.target.value)}} placeholder="Enter your Email Address" required />
+          <label htmlFor="username">Username*</label>
+          <input className="textInput" type="username" name="username" onChange={(e) => {setUsername(e.target.value)}} placeholder="Enter your Username" required />
+          <label htmlFor="password">Password*</label>
+          <input className="textInput" type="password" name="password" onChange={(e) => {setPassword(e.target.value)}} placeholder="Enter your Password" required />
+          <input className="button" type="submit" onClick={register} value="Create an account" />
+          <h1 style={{fontSize: '15px', textAlign: 'center', marginTop: '20px'}}>{registerStatus}</h1>
+        </form>
+      </div>
+    </div>
   );
-};
-
+}
 export default SignUpForm;

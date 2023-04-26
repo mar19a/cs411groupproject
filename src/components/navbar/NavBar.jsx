@@ -6,14 +6,18 @@ import SeekersLogo from "../../pictures/Seekers-Logo.png";
 import "./Navbar.css";
 import LoginForm from "../LoginForm/LoginForm";
 import SignUpForm from "../SignUpForm/SignUpForm";
+import { useAuth } from "../LoginForm/AuthContext";
 
 const NavBar = () => {
   const [click, setClick] = useState(false);
   const [alink, setALink] = useState("#fff");
+
+
   const [btnColor, setbtnColor] = useState("#333");
   const [btnBorderColor, setBtnBorderColor] = useState("2px solid #333");
   const [showLoginForm, setShowLoginForm] = useState(false);
   const [showSignUpForm, setShowSignUpForm] = useState(false);
+
 
   useEffect(() => {
     if (window.location.pathname === "/listings") {
@@ -38,12 +42,6 @@ const NavBar = () => {
   const returnHome = () => {
     window.location = "/";
   };
-
-  const toggleLoginForm = () => {
-    setShowLoginForm(!showLoginForm);
-  };
-
- 
 
   return (
     <div className="navbar">
