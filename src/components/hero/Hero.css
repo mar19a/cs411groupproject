@@ -1,84 +1,94 @@
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
-      url("../../pictures/mainHouse.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    width: 100%;
-    z-index: 1;
-    bottom: 90px;
-    height: 425px;
-  }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.656), rgba(0, 0, 0, 0.180)),
+    url("../../pictures/MapOfHouses.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  bottom: 70px;
+  height: 900px;
+}
+
+.content {
+  width: 40%;
+  text-align: left;
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 100;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 4px;
   
+}
+
+.search input {
+
+  border:transparent;
+  border-bottom: white solid 2px;
+  font-size: 24px;
+  width: 80%;
+  height: 50px;
+  cursor: text;
+  background-color: #ffffff00;
+  outline: none;
+  
+}
+
+
+input::placeholder {
+  color: rgb(255, 255, 255);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.search button {
+  padding-top: 10px;
+  background-color: #b8b8b8c2;
+  border: 1px solid #b8b8b8c2;
+  color: #fff;
+  padding: 5px;
+  cursor: pointer;
+  width: 35px;
+  height: 36px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search .icon {
+  font-size: x-large;
+  display: inline;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  h1 {
+    font-size: 24px;
+  }
+
   .content {
-    width: 40%;
+    width: 70%;
     text-align: left;
     position: absolute;
     top: 45%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    color: white;
-    z-index: 100;
+    left: 40%;
   }
-  
-  .search {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 4px;
-  }
-  
-  .search input {
-    border: transparent;
-    font-size: 1.1rem;
-    width: 80%;
-    height: 35px;
-    cursor: text;
-  }
-  
-  ::placeholder {
-    color: #b2b2b2;
-  }
-  
-  .search button {
-    background-color: #1277e1;
-    border: 1px solid #1277e1;
-    color: #fff;
-    padding: 5px;
-    cursor: pointer;
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+
   .search .icon {
     font-size: x-large;
     display: inline;
-    align-items: center;
+    color: #fff;
+    margin: 0;
   }
-  
-  @media only screen and (max-width: 1000px) {
-    h1 {
-      font-size: 24px;
-    }
-  
-    .content {
-      width: 70%;
-      text-align: left;
-      position: absolute;
-      top: 45%;
-      left: 40%;
-    }
-  
-    .search .icon {
-      font-size: x-large;
-      display: inline;
-      color: #fff;
-      margin: 0;
-    }
-  
-  }
+
+}

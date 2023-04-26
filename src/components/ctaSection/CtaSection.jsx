@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
-import ForSale from "../../pictures/forSale.jpg";
+import RestaurantImage from "../../pictures/Restaurant.jpg";
 import { useNavigate } from "react-router-dom";
 import "./CtaSection.css";
 
@@ -28,7 +28,7 @@ const CtaSection = ({ fetchBusinesses }) => {
   return (
     <div className="ctaSection">
       <div className="Section">
-        <img alt="for sale house" src={ForSale} />
+      <img alt="restaurant" src={RestaurantImage} />
         <div className="verbiage">
           <h2> Search Local Businesses Nearby! </h2>
           <p>
