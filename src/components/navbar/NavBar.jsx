@@ -61,8 +61,8 @@ const NavBar = () => {
             <a className="aLinks" href="/News">
               News
             </a>
-            <a className="aLinks" href="/" >
-              Sell
+            <a className="aLinks" href="/MarketInsights" >
+            Insights
             </a>
             <a className="aLinks" href="/" >
               Mortgage
