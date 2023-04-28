@@ -26,7 +26,7 @@ const Contact = () => {
         />
         <div className="container">
           <form className="shadow" onSubmit={handleSubmit}>
-            <h4>Here in Seekers, we believe that clients needs always come first. As a result, you should expect us to contact you back in 1 hour!</h4> <br />
+            <h4>Here in Seekers, we believe that clients' needs always come first. As a result, you should expect us to contact you back in 1 hour!</h4> <br />
             <div>
               <label htmlFor="firstName">First Name</label>
               <input type="text" id="firstName" name="firstName" placeholder="First Name" />

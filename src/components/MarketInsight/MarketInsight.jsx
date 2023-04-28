@@ -32,6 +32,31 @@ const MarketInsight = () => {
       <p>
         Note: These figures are for illustrative purposes only and may not reflect current market conditions. Please consult with a real estate professional for the most up-to-date information.
       </p>
+      <div>
+      <h2>First-Time Homeowners: Things to Know</h2>
+      <p>
+        Buying a home for the first time can be an exciting yet challenging
+        experience. One crucial thing to understand is the importance of
+        budgeting and pre-approval. Determine how much you can afford and get
+        pre-approved for a mortgage before starting your home search. This will
+        give you a clear idea of your price range and show sellers that you're
+        a serious buyer. Additionally, be aware of the hidden costs of
+        homeownership, such as maintenance, property taxes, insurance, and
+        utility bills. It's essential to account for these expenses when
+        planning your budget.
+      </p>
+      <p>
+        When looking for an agent, it's crucial to find someone who is
+        knowledgeable, experienced, and well-connected in the local real estate
+        market. A good agent will have a deep understanding of the current
+        market trends and be able to provide valuable advice on various
+        neighborhoods, home styles, and financing options. Communication is
+        vital, so choose an agent who listens to your needs and keeps you
+        informed throughout the home buying process. Don't hesitate to ask for
+        references and read reviews to ensure that the agent has a solid track
+        record of satisfied clients. Here at Seekers, we have a team of highly qualified agents who are ready to help you find your dream home.
+      </p>
+        </div>
         </div>
     
   );
