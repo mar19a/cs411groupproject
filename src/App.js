@@ -12,6 +12,7 @@ import NewsPage from "./components/NewsPage/NewsPage";
 import SignUpForm from "./components/SignUpForm/SignUpForm";
 import LoginForm from "./components/LoginForm/LoginForm";
 import MarketInsight from "./components/MarketInsight/MarketInsight";
+import Agents from "./components/Agents/Agents";
 import { AuthProvider } from "./components/LoginForm/AuthContext"; 
 function App() {
   const [listings, setListings] = useState([]);
@@ -149,6 +150,13 @@ function App() {
       element: (
         <LoginForm />
       ),
+    },
+    {
+      path: "/agents",
+      element: (
+        <Agents />
+      )
+
     },
     
   ]);

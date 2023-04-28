@@ -67,7 +67,7 @@ const NavBar = () => {
             <a className="aLinks" href="/" >
               Mortgage
             </a>
-            <a className="aLinks" href="/" >
+            <a className="aLinks" href="/Agents" >
             Agents
             </a>
             <a className="aLinks" href="/Contact">
