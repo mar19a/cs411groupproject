@@ -28,7 +28,6 @@ const CtaSection = ({ fetchBusinesses }) => {
   return (
     <div className="ctaSection">
       <div className="Section">
-      <img alt="restaurant" src={RestaurantImage} />
         <div className="verbiage">
           <h2> Search Local Businesses Nearby! </h2>
           <p>

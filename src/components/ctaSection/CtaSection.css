@@ -1,6 +1,14 @@
 .ctaSection {
-  width: 85%;
-  margin: auto auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.656), rgba(0, 0, 0, 0.180)),
+  url("../../pictures/Restaurant.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+width: 100%;
+z-index: 1;
+top: 25px;
+height: 820px;
 }
 
 .ctaSection img {
