@@ -8,9 +8,7 @@ const Home = ({ fetchListings, listings, fetchBusinesses }) => {
       <Hero
         fetchListings={fetchListings}
         listings={listings}
-      />
-      <CtaSection 
-      fetchBusinesses={fetchBusinesses}
+        fetchBusinesses={fetchBusinesses}
       />
     </div>
   );
