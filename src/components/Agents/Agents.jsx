@@ -11,8 +11,8 @@ const Agents = () => {
       name: 'John Doe',
       image: JohnDoe,
       position: 'Real Estate Agent',
-      phone: '123-456-7890',
-      email: 'johndoe@realestatecompany.com'
+      phone: '617-456-7890',
+      email: 'johndoe@seekers.com'
     },
     {
       id: 2,
@@ -20,15 +20,15 @@ const Agents = () => {
       image: JaneSmith,
       position: 'Real Estate Agent',
       phone: '987-654-3210',
-      email: 'janesmith@realestatecompany.com'
+      email: 'janesmith@seekers.com'
     },
     {
       id: 3,
       name: 'Bob Johnson',
       image: BobJohnson,
       position: 'Real Estate Agent',
-      phone: '555-555-5555',
-      email: 'bobjohnson@realestatecompany.com'
+      phone: '857-908-1284',
+      email: 'bobjohnson@seekers.com'
     }
   ];
 
