@@ -24,11 +24,11 @@ const LoginForm = () => {
         setLoginStatus(response.data.message);
       } else {
         setLoginStatus(response.data[0].email);
-        setCurrentUser(username); // <- Set the current user here
+        setCurrentUser(username); // This will now save the user to the local storage as well
       }
     });
-  }
-
+  };
+ 
   const responseGoogle = (response) => {
     if (response.error) {
       console.error(response.error);

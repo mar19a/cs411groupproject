@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, useEffect } from "react";
 
 const AuthContext = createContext();
 
@@ -9,14 +9,22 @@ export const useAuth = () => {
 export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
 
-  // Add a new state variable for the user's information
-  const [userInfo, setUserInfo] = useState(null);
+  useEffect(() => {
+    // Load the current user from local storage when the context is initialized
+    const storedUser = localStorage.getItem("currentUser");
+    if (storedUser) {
+      setCurrentUser(JSON.parse(storedUser));
+    }
+  }, []);
+
+  const saveCurrentUser = (username) => {
+    setCurrentUser(username);
+    localStorage.setItem("currentUser", JSON.stringify(username));
+  };
 
   const value = {
     currentUser,
-    setCurrentUser,
-    userInfo, // Add the new userInfo state to the context
-    setUserInfo, // Add the new setUserInfo state to the context
+    setCurrentUser: saveCurrentUser,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
