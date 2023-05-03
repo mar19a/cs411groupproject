@@ -1,49 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const AdditionalInfoForm = ({ onSubmit }) => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
+  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit({ name, email, phoneNumber });
+    onSubmit({ name, username });
   };
 
   return (
-    <div className="additional-info-form">
-      <h4>Please provide the following information</h4>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name*</label>
-        <input
-          type="text"
-          name="name"
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Enter your name"
-          required
-        />
-
-        <label htmlFor="email">Email*</label>
-        <input
-          type="email"
-          name="email"
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Enter your email"
-          required
-        />
-
-        <label htmlFor="phoneNumber">Phone Number*</label>
-        <input
-          type="tel"
-          name="phoneNumber"
-          onChange={(e) => setPhoneNumber(e.target.value)}
-          placeholder="Enter your phone number"
-          required
-        />
-
-        <input className="button" type="submit" value="Submit" />
-      </form>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <h4>Enter Additional Information</h4>
+      <label htmlFor="name">Name*</label>
+      <input
+        className="textInput"
+        type="text"
+        name="name"
+        onChange={(e) => setName(e.target.value)}
+        placeholder="Enter your Name"
+        required
+      />
+      <label htmlFor="username">Username*</label>
+      <input
+        className="textInput"
+        type="text"
+        name="username"
+        onChange={(e) => setUsername(e.target.value)}
+        placeholder="Enter your Username"
+        required
+      />
+      <input className="button" type="submit" value="Submit" />
+    </form>
   );
 };
 
