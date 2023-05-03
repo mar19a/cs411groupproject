@@ -108,7 +108,7 @@ const LoginForm = () => {
             >
               {loginStatus}
             </h1>
-            <div id="signInButton">Sign in with Google</div>
+            <button id="signInButton" className="google-signin-button">Sign in with Google</button>
           </form>
         ) : (
           <AdditionalInfoForm onSubmit={handleAdditionalInfoSubmit} />
