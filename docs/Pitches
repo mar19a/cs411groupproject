@@ -1,0 +1,26 @@
+Mariano: Twitter API + Yahoo Finance API
+Basically, we will look at the sentiments of twitter users on a certain stock. The website will basically ask the person to search for a stock, and then will gather information about twitter user’s on that stock. And the person can visualize how the stock performs based on twitter user’s sentiments.
+
+We will accomplish this by using Javascript and Python.
+
+Mariano: Real Estate (Realty API) + Census Data API
+The user can pick from real estate listings, and check data from the US census to see if the listing is a good buy or not. For example, if a place population is decreasing, but the price of the listing is increasing, it might not be a good buy. The user can pick from different category such as population, average income, education, etc.
+
+Population
+If the population is increasing then the li
+
+Based on the demographic of the town/city and how its changing, we try to predict the price listing of the future, the percentage of it being a good buy
+
+-Write user experiences
+- We’re using the Census data of the 50 states (generally)
+- Our web app will predict how real estate prices will change based on the census data 
+
+Adi: Google Chrome or any web browser’s API
+By looking at a person’s google search history as well as when each search occurred, we will be able to use those searches to generate and predict a list of searches that either the user is likely to search in the future or the user is interested in if that search were to pop up.
+
+Adi: Spotify/Apple Music API
+By looking at a user’s listening history we can break down the type/genre of music they are listening to and recommend to them a playlist of songs or a list of artists that they might enjoy every month.
+
+
+February 26, 2023:
+Real Estate Idea
