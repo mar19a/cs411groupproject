@@ -118,3 +118,44 @@ a:hover {
     right: 0;
   }
 }
+.sign-in-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.sign-in-icon {
+  font-size: 1.5rem;
+  margin-right: 5px;
+}
+
+.sign-in-text {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f8f8;
+}

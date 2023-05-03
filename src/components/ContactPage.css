@@ -1,3 +1,14 @@
+
+.thanks-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3a3a3a;
+}
 .contact form div {
     display: flex;
   }
@@ -28,7 +39,21 @@
   color: white;
 }
 
+.contact form button {
+  background-color: #5a9;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
 
+.contact form button:hover {
+  background-color: #7ac;
+}
 
 .contact section.contact.mb .back img {
   filter: hue-rotate(90deg);

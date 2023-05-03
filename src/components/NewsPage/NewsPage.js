@@ -8,7 +8,7 @@ const NewsPage = () => {
   useEffect(() => {
     const getArticles = async () => {
       try {
-        const response = await axios.get(`https://newsapi.org/v2/everything?q=massachusetts&from=2023-03-10&sortBy=publishedAt&apiKey=1cbb1ed4bef44f50ad4016f01131e3e4`);
+        const response = await axios.get(`https://newsapi.org/v2/everything?q=massachusetts&from=2023-04-10&sortBy=publishedAt&apiKey=1cbb1ed4bef44f50ad4016f01131e3e4`);
         setArticles(response.data.articles);
         console.log(response);
       } catch (error) {

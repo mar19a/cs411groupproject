@@ -2,6 +2,8 @@ Clone the repository
 
 Do " npm install " to install the dependencies
 
+Do " npm install react-google-login --legacy-peer-deps " to install the Google Oauth dependencies
+
 Do " npm start " to start the website
 
 
