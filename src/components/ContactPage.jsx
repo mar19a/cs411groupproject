@@ -19,8 +19,7 @@ const Contact = () => {
     <>
       <section className="contact mb">
         <Back
-          name="Contact Us"
-          title="Get Helps & Friendly Support"
+          title="Get Help & Friendly Support"
           cover={img}
           className="back"
         />
@@ -28,13 +27,11 @@ const Contact = () => {
           <form className="shadow" onSubmit={handleSubmit}>
             <h4>Here in Seekers, we believe that clients' needs always come first. As a result, you should expect us to contact you back in 1 hour!</h4> <br />
             <div>
-              <label htmlFor="firstName">First Name</label>
+              <label htmlFor="firstName">Full Name     </label>
               <input type="text" id="firstName" name="firstName" placeholder="First Name" />
-              
-              <label htmlFor="lastName">Last Name</label>
-              <input type="text" id="lastName" name="lastName" placeholder="Last Name" />
-              
-              <label htmlFor="email">Email</label>
+            </div>
+            <div>
+              <label htmlFor="email">Email      </label>
               <input
                 id="email"
                 type="email"
