@@ -1,1 +1,13 @@
+We chose React as our main language because React's component-based architecture allows developers to
+break down complex UIs into smaller, reusable components, which makes it easier to build and maintain complex 
+real estate websites as each component can be easily managed and updated independently. Additionally, React is known 
+for its high performance and speed due to its use of a virtual DOM, which minimizes direct manipulation of the actual DOM 
+and leads to faster rendering and better performance, making it a suitable choice for real estate websites that require fast loading times.
 
+We chose MySQL because MySQL is a popular open-source relational database management system that is a reliable and robust choice for holding profiles.
+It is a relational database, which means that it organizes data in tables with relationships between them, making it easy to manage and query 
+profile data, as it can be stored in multiple tables with connections between them. Additionally, MySQL is designed to be scalable and can handle 
+large amounts of data, making it suitable for profile databases that may need to store a large number of user profiles and related information.
+MySQL is also known for its high performance and ability to handle multiple concurrent users and transactions, which is important for profile databases 
+that may experience heavy traffic and need to respond quickly to user queries. Furthermore, MySQL has a strong security model that includes user 
+authentication and access control, making it a suitable choice for profile databases that may contain sensitive information that needs to be protected.
