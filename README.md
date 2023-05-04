@@ -1,4 +1,5 @@
 Website made by Mariano Majano Amaya and Gary Dong.
+
 Clone the repository
 
 Do " npm install " to install the dependencies
